@@ -1,0 +1,48 @@
+---
+interface Props {
+	title?: string;
+	body?: string;
+	href?: string;
+}
+
+const { href, title, body } = Astro.props;
+---
+
+<header class="flex flex-row bg-zinc-900 p-5 items-center justify-around">
+	<div class="flex">
+		<div class="avatar">
+			<div class="w-24 rounded-full">
+			  <img src="https://avatars.githubusercontent.com/u/152911271?s=400&u=4b4531944510da3f6c87ea97039f89d46a4cbf34&v=4" />
+			</div>
+		  </div>
+	</div>
+	<div>
+		<div role="alert" class="alert alert-success">
+			<svg
+			  xmlns="http://www.w3.org/2000/svg"
+			  class="h-6 w-6 shrink-0 stroke-current"
+			  fill="none"
+			  viewBox="0 0 24 24">
+			  <path
+				stroke-linecap="round"
+				stroke-linejoin="round"
+				stroke-width="2"
+				d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+			</svg>
+			<span>se divirta no meu portifolio</span>
+		  </div>
+	</div>
+	<div class="">
+		<button class="btn text-white font-bold " onclick="my_modal_2.showModal()">OQUE EU FAÇO</button>
+		<dialog id="my_modal_2" class="modal rounded-2xl">
+		  <div class="modal-box p-6 bg-zinc-600">
+			<h3 class="text-lg ">CÓDIGOS E APIS !</h3>
+			<p class="py-4 font-semibold">é depois que eu desbri que eu tenho talento <br> pra isso é a unica coisa que eu faço 😅</p>
+			<p>aperte ESC pra sair ou clique fora desta caixa</p>
+		</div>
+		  <form method="dialog" class="modal-backdrop p-3 bg-zinc-900">
+			<button class="p-2">close</button>
+		</form>
+		</dialog>
+	</div>
+</header>
